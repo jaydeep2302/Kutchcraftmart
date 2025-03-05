@@ -43,7 +43,7 @@ const TextSlider = ({ slides = defaultSlides, type = "text" }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="relative w-full h-[400px] bg-gradient-to-b from-teal-100 to-teal-50 flex items-center justify-center p-6">
+    <div className="relative w-full h-[400px] bg-teal-100 clip-wave flex items-center justify-center p-6">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -54,7 +54,7 @@ const TextSlider = ({ slides = defaultSlides, type = "text" }) => {
         }}
         speed={500}
         modules={[ Autoplay]}
-        className="w-full text-center text-white"
+        className="w-full text-center text-teal-700"
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, index) => (
@@ -69,7 +69,7 @@ const TextSlider = ({ slides = defaultSlides, type = "text" }) => {
                   {type === "text" ? (
                     <>
                       <motion.h2
-                        className="text-2xl sm:text-3xl font-bold text-black mb-4"
+                        className="text-2xl sm:text-3xl font-bold text-teal-700 mb-4"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
@@ -78,7 +78,7 @@ const TextSlider = ({ slides = defaultSlides, type = "text" }) => {
                         {slide.heading}
                       </motion.h2>
 
-                      <motion.p className="text-base sm:text-lg text-black px-4 max-w-2xl leading-relaxed">
+                      <motion.p className="text-base sm:text-lg text-teal-700 px-4 max-w-2xl leading-relaxed">
                         {slide.paragraph.split(" ").map((word, i) => (
                           <motion.span
                             key={i}

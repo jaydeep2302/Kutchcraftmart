@@ -1,0 +1,7 @@
+.men-navbar a {
+    color: white !important;
+  }
+  
+  .men-navbar a:hover {
+    color: #ffcc00 !important; /* Change text color on hover */
+  }
